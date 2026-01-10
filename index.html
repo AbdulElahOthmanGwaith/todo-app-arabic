@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ar" dir="rtl">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>قائمة المهام الذكية</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <div class="container">
+        <header class="header">
+            <h1>قائمة المهام</h1>
+            <p class="subtitle">نظم يومك بذكاء</p>
+        </header>
+
+        <div class="input-section">
+            <input type="text" id="taskInput" placeholder="أضف مهمة جديدة..." maxlength="50">
+            <select id="prioritySelect">
+                <option value="normal">عادية</option>
+                <option value="important">مهمة</option>
+                <option value="urgent">عاجلة</option>
+            </select>
+            <button id="addTaskBtn">إضافة</button>
+        </div>
+
+        <div class="stats-section">
+            <div class="stat-card">
+                <span class="stat-number" id="totalTasks">0</span>
+                <span class="stat-label">إجمالي المهام</span>
+            </div>
+            <div class="stat-card completed">
+                <span class="stat-number" id="completedTasks">0</span>
+                <span class="stat-label">المكتملة</span>
+            </div>
+            <div class="stat-card pending">
+                <span class="stat-number" id="pendingTasks">0</span>
+                <span class="stat-label">المعلقة</span>
+            </div>
+        </div>
+
+        <div class="filter-section">
+            <button class="filter-btn active" data-filter="all">الكل</button>
+            <button class="filter-btn" data-filter="pending">قيد الانتظار</button>
+            <button class="filter-btn" data-filter="completed">مكتملة</button>
+        </div>
+
+        <ul id="taskList" class="task-list">
+            <!-- المهام ستضاف هنا -->
+        </ul>
+
+        <div id="emptyMessage" class="empty-message">
+            <span class="empty-icon">📝</span>
+            <p>لا توجد مهام حالياً</p>
+            <p class="empty-hint">أضف مهمة جديدة للبدء</p>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
